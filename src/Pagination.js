@@ -14,16 +14,16 @@ function Pagination({currentPage, total, limit, onPageChange}) {
     const pagesCount = Math.ceil(total / limit)
     const pages = getRange(1, pagesCount)
     return (
-        <ul className="pagination">
-            {pages.map(page => (
-                <PaginationItem 
-                    page={page}
-                    key={page}
-                    currentPage={currentPage}
-                    onPageChange={onPageChange}
-                />
-            ))}
-        </ul>
+            <ul className="pagination">
+                {pages.map(page => (
+                    <PaginationItem 
+                        page={page}
+                        key={page}
+                        currentPage={currentPage}
+                        onPageChange={onPageChange}
+                    />
+                ))}
+            </ul>
     )
 }
 

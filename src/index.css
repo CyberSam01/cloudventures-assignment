@@ -1,50 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+header {
+  background-color: #a9e4f9;
+}
+
+header > h1 {
+  padding-left: 1em;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.countries-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 1em;
+}
+
+.country {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.country > p {
+  margin-bottom: .3em;
+}
+
+.flag-img {
+  height: 6vh;
+  margin: .5em;
 }
 
 .pagination {
-  display: inline-block;
-  padding-left: 0;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 0.25rem;
+  max-width: 80vw;
+  margin: 1em auto;
+  padding-inline-start: 0;
+  list-style-type: none;
 }
+
 .page-item {
   display: inline;
+  
 }
-.page-item:first-child .page-link {
-  margin-left: 0;
-  border-bottom-left-radius: 0.25rem;
-  border-top-left-radius: 0.25rem;
-}
-.page-item:last-child .page-link {
-  border-bottom-right-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-}
+
 .page-item.active .page-link,
 .page-item.active .page-link:focus,
 .page-item.active .page-link:hover {
-  z-index: 2;
   color: #fff;
-  cursor: default;
-  background-color: #5cb85c;
-  border-color: #5cb85c;
+  background-color: #000000;
+  border-color: #000000;
 }
 .page-item.disabled .page-link,
 .page-item.disabled .page-link:focus,
 .page-item.disabled .page-link:hover {
-  color: #818a91;
-  pointer-events: none;
-  cursor: not-allowed;
+  color: #000000;
   background-color: #fff;
   border-color: #ddd;
 }
 .page-link {
+  margin-bottom: 1em;
   position: relative;
   float: left;
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
-  color: #5cb85c;
+  color: #000000;
   text-decoration: none;
   background-color: #fff;
   border: 1px solid #ddd;
@@ -52,7 +85,47 @@ body {
 }
 .page-link:focus,
 .page-link:hover {
-  color: #3d8b3d;
+  color: #000000;
   background-color: #eceeef;
-  border-color: #ddd;
+}
+
+@media screen and (min-width: 600px) {
+
+  body {
+    font-size: 1.7rem;
+  }
+
+  header > h1 {
+    padding-left: 2em;
+  }
+
+  .pagination, .countries-container {
+    width: 80vw;
+    margin: 0 auto;
+  }
+
+  .countries-container {
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 2em;
+  }
+  
+  .country > p {
+    margin: 0 0 .5em 0;
+  }
+  
+  .flag-img {
+    height: 10vh;
+    margin: 0;
+  }
+
+  .pagination {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+  }
+
+  .page-link {
+    padding: .7rem 1.2rem;
+  }
 }
