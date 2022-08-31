@@ -1,7 +1,7 @@
 # Cloud Ventures Assignment
 
 This is a list of all countries and their flags.
-Visit the live page here: [deployment](https://cloudventures-assignment.vercel.app/)
+Visit the live page here: [Countries of the World](https://cloudventures-assignment.vercel.app/)
 
 ## Challenges
 
